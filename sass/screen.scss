@@ -17,3 +17,21 @@ body {
 		background-color:#333;
 	}
 }
+
+#message-area, #log {
+	font-size:2em;
+	font-family:helvetica;
+	color:#fff;
+	padding:1em;
+	text-align:center;
+}
+
+#log {
+	font-family:georgia;
+	color:#ddd;
+}
+
+#details {
+	font-size:1em;
+	color:#fff;
+}

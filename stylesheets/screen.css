@@ -22,3 +22,24 @@ body.not-listening {
   transition: background-color 1s ease-in-out;
   background-color: #333;
 }
+
+/* line 21, ../sass/screen.scss */
+#message-area, #log {
+  font-size: 2em;
+  font-family: helvetica;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+}
+
+/* line 29, ../sass/screen.scss */
+#log {
+  font-family: georgia;
+  color: #ddd;
+}
+
+/* line 34, ../sass/screen.scss */
+#details {
+  font-size: 1em;
+  color: #fff;
+}
