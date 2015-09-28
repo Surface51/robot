@@ -19,6 +19,15 @@ var setName = function(term) {
   $("#details").append("<li>Your Name is "+name+"</li>")
 };
 
+var siri = function(term, term2) {
+  $("body").addClass("blush");
+  $("#message-area").html("I'll never tell...");
+}
+
+var crush = function() {
+  $("#message-area").html("I hardly even know you.");
+}
+
 var allowed = true;
 var timeout;
 // When the page first loads.
@@ -26,8 +35,11 @@ $( document ).ready(function() {
   if (annyang) {
     var commands = {
       'hello': hello,
+      '*term siri *term2': siri,
+      '*term siri': siri,
       'my name is *term': setName,
-      '*term': printTerm,
+      'do you have a crush on me': crush,
+      'Hey *term': printTerm,
     };
 
     annyang.debug();
@@ -57,9 +69,10 @@ $( document ).ready(function() {
 
       timeout = setTimeout(function() {
        $("body").removeClass("not-listening");
+       $("body").removeAttr("class");
        allowed = true;
        annyang.abort();
-       $("#message-area").html("Hold down the space bar.");
+       //$("#message-area").html("Hold down the space bar.");
     }, 1000);
       
     }

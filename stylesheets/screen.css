@@ -22,8 +22,16 @@ body.not-listening {
   transition: background-color 1s ease-in-out;
   background-color: #333;
 }
+/* line 19, ../sass/screen.scss */
+body.blush {
+  -moz-transition: background-color 1s ease-in-out;
+  -o-transition: background-color 1s ease-in-out;
+  -webkit-transition: background-color 1s ease-in-out;
+  transition: background-color 1s ease-in-out;
+  background-color: #e491f9;
+}
 
-/* line 21, ../sass/screen.scss */
+/* line 25, ../sass/screen.scss */
 #message-area, #log {
   font-size: 2em;
   font-family: helvetica;
@@ -32,13 +40,13 @@ body.not-listening {
   text-align: center;
 }
 
-/* line 29, ../sass/screen.scss */
+/* line 33, ../sass/screen.scss */
 #log {
   font-family: georgia;
   color: #ddd;
 }
 
-/* line 34, ../sass/screen.scss */
+/* line 38, ../sass/screen.scss */
 #details {
   font-size: 1em;
   color: #fff;
