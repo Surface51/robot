@@ -28,7 +28,7 @@ $( document ).ready(function() {
         console.log('Space down');
         annyang.start();
         clearTimeout(timeout);
-        $("body").css("background-color", "green");
+        $("body").addClass("listening");
       }
     }
   });
@@ -36,10 +36,12 @@ $( document ).ready(function() {
   $(window).keyup(function(e) {
     if (e.keyCode === 0 || e.keyCode === 32) {
       console.log('Space up');
-      $("body").css("background-color", "white");
+      $("body").removeClass("listening");
+      $("body").addClass("not-listening");
 
       timeout = setTimeout(function() {
-        allowed = true;
+       $("body").removeClass("not-listening");
+       allowed = true;
         annyang.abort();
     }, 1000);
       
