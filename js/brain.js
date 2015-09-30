@@ -19,6 +19,10 @@ var setName = function(term) {
   $("#details").append("<li>Your Name is "+name+"</li>")
 };
 
+var boston = function() {
+  $("#message-area").html("BOSTON");
+};
+
 var allowed = true;
 var timeout;
 // When the page first loads.
@@ -26,6 +30,7 @@ $( document ).ready(function() {
   if (annyang) {
     var commands = {
       'hello': hello,
+      'boston': boston,
       'my name is *term': setName,
       '*term': printTerm,
     };
@@ -33,11 +38,12 @@ $( document ).ready(function() {
     annyang.debug();
     annyang.addCommands(commands);
     annyang.setLanguage('en');
-    //annyang.start();
+    annyang.start();
   } else {
     
   }
 
+  /*
   $(window).keydown(function(e) {
     if (e.keyCode === 0 || e.keyCode === 32) {
       if (allowed) {
@@ -63,7 +69,7 @@ $( document ).ready(function() {
     }, 1000);
       
     }
-  });
+  });*/
 });
 
 // When everything on the page has loaded.
